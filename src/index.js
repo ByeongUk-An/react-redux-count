@@ -4,9 +4,8 @@ import App from "./App";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { composeWithDevTools } from "redux-devtools-extension";
-import counter from "./modules/counter";
-
-const store = createStore(counter, composeWithDevTools());
+import rootReducer from "./modules";
+const store = createStore(rootReducer, composeWithDevTools());
 
 ReactDOM.render(
   <React.StrictMode>
